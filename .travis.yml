@@ -1,7 +1,7 @@
 language: bash
 services: docker
 before_install:
-  - cd 17\ RestWithSpringBootUdemy\ Docker/
+  - cd RestWithSpringBootUdemyDocker
   - echo "We are in the Docker folder!"
 script:
   - docker-compose build
@@ -10,8 +10,8 @@ before_deploy:
 deploy:
   provider: script
   script:
-    docker push leandrocgsi/mysql-rest-with-spring-boot-udemy;
-    docker push leandrocgsi/rest-with-spring-boot-udemy;
+    docker push leolimasjc/mysql-rest-with-spring-boot-udemy;
+    docker push leolimasjc/rest-with-spring-boot-udemy;
   on:
     branch: master
 notifications:
